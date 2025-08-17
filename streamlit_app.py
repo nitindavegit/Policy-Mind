@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 st.set_page_config(page_title="PolicyMind", layout="wide", page_icon="🧠")
-st.title("🧠 PolicyMind v2.0")
+st.title("🧠 PolicyMind v2.1")
 st.caption("AI-Powered Insurance Policy Analysis Engine with Natural Language Responses")
 
 if 'processing_history' not in st.session_state:
@@ -174,7 +174,7 @@ with tab2:
                             "timestamp": datetime.now().isoformat()
                         })
                         st.success("✅ Analysis complete! Check the AI Response tab.")
-                        st.balloons()
+                        #removed BALLOONS 
                     else:
                         st.error(f"❌ API Error: {response.status_code}")
                         st.json(response.text)
