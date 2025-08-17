@@ -128,7 +128,7 @@ with tab2:
                 r = requests.post("http://localhost:8000/upload/", files=files)
                 if r.status_code == 200:
                     st.success("✅ Document uploaded and indexed successfully!")
-                    st.balloons()
+                    
                 else:
                     st.error(f"❌ Upload failed: {r.text}")
             except Exception as e:
